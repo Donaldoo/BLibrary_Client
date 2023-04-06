@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Footer, Header } from "./Components";
+import { Header } from "./Components";
 import { Routes, Route } from "react-router-dom";
 import {
   AccessDenied,
@@ -54,7 +54,6 @@ function App() {
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
-      <Footer />
     </div>
   );
 }
