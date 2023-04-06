@@ -15,37 +15,42 @@ function BookDetails() {
   console.log(data);
 
   return (
-    <div className="container pt-4 pt-md-5">
+    <div className="container pt-4 pt-md-5 pb-4" style={{ height: "100vh" }}>
       {!isLoading ? (
         <>
           <div className="row">
             <div className="col-7">
               <h1 className="text-success">{data.result.name}</h1>
               <span>
-                <span
-                >
+                <span>
                   {categoriesData?.map((category: CategoryModel) => (
                     <span
                       key={category.id}
                       className="badge text-bg-dark pt-1"
-                      style={{ height: "30px", fontSize: "18px", margin: "2px"}}
+                      style={{
+                        height: "30px",
+                        fontSize: "18px",
+                        margin: "2px",
+                      }}
                     >
-                    {category.name}
+                      {category.name}
                     </span>
                   ))}
                 </span>
               </span>
 
-              <p style={{ fontSize: "20px", maxWidth: "80%" }} className="pt-4 pb-4">
+              <p
+                style={{ fontSize: "20px", maxWidth: "80%" }}
+                className="pt-4 pb-4"
+              >
                 {data.result.description}
               </p>
 
-
               <h3 className="text-success pt-4">
                 {" "}
-               {authorData?.result.name || "Loading author..."}
+                {authorData?.result.name || "Loading author..."}
               </h3>
-              <p style={{ fontSize: "18px"}} className="p-0">
+              <p style={{ fontSize: "18px" }} className="p-0">
                 {data.result.createdAt}
                 <br />
                 Created by: {data.result.createdBy}
