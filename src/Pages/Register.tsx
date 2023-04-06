@@ -99,7 +99,7 @@ function Register() {
             </select>
           </div>
         </div>
-        <div className="mt-5">
+        <div className="mt-3 mb-5">
           <button type="submit" className="btn btn-success" disabled={loading}>
             Register
           </button>
